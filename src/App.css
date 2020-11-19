@@ -17,8 +17,8 @@ body {
 @media only screen and (max-width:600px) {
   .square-button {
     background-color: #61dafb;
-    height: 25vmin;
-    width: 25vmin;
+    height: 24vmin;
+    width: 24vmin;
     margin: 10px 10px;
     font-size: 32px;
     font-weight: 650;
