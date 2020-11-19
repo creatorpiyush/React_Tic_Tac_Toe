@@ -1,17 +1,32 @@
 body {
   background-color: #282c34;
   text-align: center;
+  padding: 2%;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-weight: 800;
 }
 
 .square-button {
   background-color: #61dafb;
   height: 15vmin;
   width: 15vmin;
-  margin: 10px 10px;
+  margin: 10px;
   font-size: 38px;
   font-weight: 750;
+  border-radius: 12%;
+}
+
+.square-button:active {
+  background-color: #62b93a;
+}
+
+.board {
   position: relative;
-  top: 30vmin;
+  top: 20vmin;
 }
 
 @media only screen and (max-width:600px) {
@@ -22,7 +37,11 @@ body {
     margin: 10px 10px;
     font-size: 32px;
     font-weight: 650;
+    border-radius: 15%;
+  }
+
+  .board {
     position: relative;
-    top: 50vmin;
+    top: 45vmin;
   }
 }
