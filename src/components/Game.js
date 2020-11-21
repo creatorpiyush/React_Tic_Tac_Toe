@@ -4,6 +4,8 @@ import Board from "./Board";
 
 import Title from "./Title";
 
+import Status from "./Status";
+
 export default class Game extends React.Component {
   constructor() {
     super();
@@ -25,7 +27,7 @@ export default class Game extends React.Component {
       return;
     }
 
-    // * Set State
+    // * SetState
     squares[i] = this.state.isXnext ? "X" : "0";
     this.setState({
       history: history.concat({
@@ -37,14 +39,22 @@ export default class Game extends React.Component {
   };
 
   render() {
-    console.log(this.state);
-
     const history = this.state.history;
     const current = history[this.state.stepNumber];
+
+    let status;
+
+    const winner = calculateWinner(current.squares);
+    if (winner) {
+      status = `Winner is ${winner}`;
+    } else {
+      status = `Player ${this.state.isXnext ? "X" : "0"} Turn`;
+    }
 
     return (
       <div>
         <Title />
+        <Status status={status} />
         <Board
           clickAction={(i) => this.handelClick(i)}
           squares={current.squares}
