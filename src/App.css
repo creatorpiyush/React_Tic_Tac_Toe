@@ -5,9 +5,15 @@ body {
 }
 
 .title {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255, 0.9);
   font-size: 60px;
   font-weight: 800;
+}
+
+.status-line {
+  color: rgb(255, 0, 0, 0.9);
+  font-size: 40px;
+  font-weight: 750;
 }
 
 .square-button {

@@ -51,6 +51,11 @@ export default class Game extends React.Component {
       status = `Player ${this.state.isXnext ? "X" : "0"} Turn`;
     }
 
+    // * Match Draw Status
+    if (this.state.stepNumber === 9) {
+      status = `Match Draw`;
+    }
+
     return (
       <div>
         <Title />
