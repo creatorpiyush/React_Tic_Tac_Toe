@@ -27,12 +27,12 @@ body {
 }
 
 .square-button:active {
-  background-color: #62b93a;
+  background-color: #63be39;
 }
 
 .board {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -40,14 +40,44 @@ body {
   margin: 0 auto;
 }
 
+.reset-button {
+  background-color: #dfe22a;
+  height: 5vmin;
+  width: 17vmin;
+  margin: 3vmin;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 12%;
+}
+
 @media only screen and (max-width:600px) {
   .square-button {
     background-color: #61dafb;
     height: 24vmin;
     width: 24vmin;
-    margin: 10px 10px;
+    margin: 7.5px 10px;
     font-size: 32px;
     font-weight: 650;
     border-radius: 15%;
+  }
+
+  .board {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .reset-button {
+    background-color: #dfe22a;
+    height: 15vmin;
+    width: 37vmin;
+    margin: 3vmin;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 12%;
   }
 }

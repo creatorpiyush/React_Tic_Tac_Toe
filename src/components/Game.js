@@ -1,10 +1,8 @@
 import React from "react";
-
 import Board from "./Board";
-
 import Title from "./Title";
-
 import Status from "./Status";
+import InputButton from "./InputButton";
 
 export default class Game extends React.Component {
   constructor() {
@@ -56,14 +54,25 @@ export default class Game extends React.Component {
       status = `Match Draw`;
     }
 
+    let buttonStatus;
+    if (winner) {
+      buttonStatus = `Next Match`;
+    } else {
+      buttonStatus = `Reset`;
+    }
+
     return (
       <div>
         <Title />
         <Status status={status} />
         <Board
+          className="board"
           clickAction={(i) => this.handelClick(i)}
           squares={current.squares}
         />
+        <div>
+          <InputButton buttonValue={buttonStatus} />
+        </div>
       </div>
     );
   }
